@@ -18,6 +18,11 @@ register(
 )
 
 using MAT # to load `.mat` files
+# Note as of 11 Feb 2019, MAT.jl's default v0.4 is not compiling on Julia v1.1,
+# therefore I have been using the "v0.7-update" version of
+#   https://github.com/halleysfifthinc/MAT.jl"
+# (as can be seen on the Manifest.toml file)
+# but hopefully this will be resolved in the near future.
 
 mat_file = @datadep_str string("OCIM1/", "CTL.mat")
 vars = matread(mat_file)
