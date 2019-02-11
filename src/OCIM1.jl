@@ -25,7 +25,7 @@ vars = matread(mat_file)
 using JLD2, FileIO # to save into `.jld2` files
 
 path_to_package_root = joinpath(splitpath(@__DIR__)[1:end-1]...)
-jld_file = joinpath(path_to_package_root, "data/OCIM1/CTL.jld2")
+jld_file = joinpath(path_to_package_root, "data/OCIM1_CTL.jld2")
 @save jld_file vars
 
 
